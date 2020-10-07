@@ -63,22 +63,3 @@ function calcStats() {
     document.getElementById("highest-grade").innerHTML = maxItem(studentGrades);
     document.getElementById("ave-grade").innerHTML = arrayAverage(studentGrades);
 }
-
-// FUNCTIONS
-
-function includes(item, anArray) {
-
-    for (i = 0; i < anArray.length; i++) {
-        if (anArray[i] == item) {
-            return true
-        } else {
-            return false
-        }
-    }
-}
-
-function minItem(anArray) {
-    
-}
-    
-

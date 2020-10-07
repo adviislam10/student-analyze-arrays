@@ -7,8 +7,15 @@
 // Purpose:         Search anArray for item.  Return true if item is in anArray, else return false.
 // Return Value:    true or false, depending on whether item is in anArray
 
+function includes(item, anArray) {
 
-
+    for (let i = 0; i < anArray.length; i++) {
+        if (anArray[i] == item) {
+            return true
+        }
+    }
+    return false
+}
 
 // 2. WRITE YOUR OWN VERSION OF MATH.MIN (do not use Math.min)
 // Function Name:   minItem
@@ -16,8 +23,17 @@
 // Purpose:         Determine the minimum value in anArray.
 // Return Value:    The minimum value in anArray.
 
+function minItem(anArray) {
+    let min = anArray[0];
 
+    for (let i = 0; i < anArray.length; i++) {
+        if (anArray[i] < min) {
+            min = anArray[i];
+        }
+    }
+    return min;
 
+}
 
 // 3. WRITE YOUR OWN VERSION OF MATH.MAX (do not use Math.max)
 // Function Name:   maxItem
@@ -25,8 +41,17 @@
 // Purpose:         Determine the minimum value in anArray.
 // Return Value:    The mmaximum value in anArray.
 
+function maxItem(anArray) {
+    let max = anArray[0];
 
+    for (let i = 0; i < anArray.length; i++) {
+        if (anArray[i] > max) {
+            max = anArray[i];
+        }
+    }
+    return max;
 
+}
 
 // 4. WRITE A FUNCTION TO DETERMINE THE AVERAGE OF ARRAY ITEMS
 // Function Name:   arrayAverage
@@ -34,4 +59,11 @@
 // Purpose:         Determine the average of the values in anArray.
 // Return Value:    The average of the values in anArray.
 
+function arrayAverage(anArray) {
+    let average = 0;
 
+    for (let i = 0; i < anArray.length; i++) {
+        average += anArray[i]
+    }
+    return average / anArray.length
+}
